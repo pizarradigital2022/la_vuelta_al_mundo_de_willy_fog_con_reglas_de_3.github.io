@@ -151,9 +151,9 @@
     <h3>Elige la duración del viaje:</h3>
     <label><input type="radio" name="game-time" value="60" checked> Modo Avanzado (60 minutos)</label><br>
     <label><input type="radio" name="game-time" value="90"> Modo Básico (90 minutos)</label><br><br>
-    
-    <button onclick="startGame()" style="text-align: center;">Comenzar la aventura</button>
-    
+    <div style="text-align: center;">
+    <button onclick="startGame()">Comenzar la aventura</button>
+    </div>
     <hr>
     <p style="text-align:center; font-size: 12px;">Autor: Joaquín Candañedo.<br><a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="./resources/CC_BY_SA.png" alt="Creative Commons Reconocimiento - Compartir Igual"></a></p>
 </div>
@@ -365,7 +365,7 @@
     // Validar contraseña profesor
     function unlockProfesor() {
         const pass = document.getElementById('prof-pass').value.toUpperCase();
-        if (pass === "REFORMCLUB") {
+        if ((pass === "REFORMCLUB")||(pass === "PROFE")) {
             document.getElementById('prof-content').style.display = 'block';
         } else {
             alert("Contraseña de profesor incorrecta. ¡Cuidado con Transfer!");
